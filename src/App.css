@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.setTransition {
+    transition:all 0.3s ease-in-out;
+}
+
+.setTransition:hover {
+    background-color: #4B5563; /* gray-600 */
+    transition: background-color 0.3s linear;
+}
+
+.main-box{
+    box-shadow:5px 5px 10px #111111 ;
+}
+
+.shadow-arrow{
+    box-shadow:0 0 16px rgba(14, 14, 14, 0.5)  ;
+}
+.image-transition:hover{
+    scale: 120%;
+    rotate: -2deg;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5)  ;
+    z-index: 10;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+
