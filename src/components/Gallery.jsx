@@ -62,10 +62,10 @@ const Gallery = () => {
                 <button onClick={handleFileAdd} className='text-xs font-semibold bg-[#404249] lg:px-7 md:px-3 lg:py-3 md:py-1 rounded-2xl shadow-[5px_5px_10px_rgba(0,0,0,0.5),-2px_-2px_5px_rgba(255,255,255,0.5)]  text-white '>
                     +ADD IMAGE
                 </button>
-                <div onClick={()=>{handleScroll("left")}} className='bg-slate-700 rounded-full lg:p-3 md:p-1 text-slate-400 shadow-arrow hover:bg-slate-800'>
+                <div onClick={()=>{handleScroll("left")}} className='bg-black/30 rounded-full lg:p-3 md:p-1 text-slate-500  shadow-arrow hover:bg-black/50'>
                     <FaArrowLeft/>
                 </div>
-                <div onClick={()=>{handleScroll("right")}} className='bg-slate-700 rounded-full lg:p-3 md:p-1 text-slate-400 shadow-arrow hover:bg-slate-800'>
+                <div onClick={()=>{handleScroll("right")}} className='bg-black/30 rounded-full lg:p-3 md:p-1 text-slate-500  shadow-arrow hover:bg-black/50'>
                     <FaArrowRight/>
                 </div>
             </div>
@@ -78,12 +78,12 @@ const Gallery = () => {
                 {images.map((image) => (
                     <div 
                         key={image.id} 
-                        className={`shrink-0 w-46 h-36 rounded-xl bg-gray-800 image-transition overflow-hidden`}
+                        className={`shrink-0 max-w-46 max-h-36 rounded-xl bg-gray-800 image-transition overflow-hidden`}
                     >
                         <img 
                             src={image.url} 
                             alt="Uploaded"
-                            className="w-full h-full object-cover filter grayscale hover:grayscale-0 " 
+                            className="w-full h-full object-fill filter grayscale hover:grayscale-0 " 
                         />
                     </div>
                 ))}
